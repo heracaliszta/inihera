@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Cute Hera ✨</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelPink: '#FFD1DC',
+                        softPink: '#FFB6C1',
+                        deepPink: '#FF69B4',
+                        cream: '#FFFDD0',
+                        warmPeach: '#FFDAB9',
+                        cutePurple: '#E6E6FA',
+                        charcoal: '#4A4A4A'
+                    },
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        quicksand: ['Quicksand', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #FFE4E1 0%, #FFF0F5 50%, #E6E6FA 100%);
+            min-height: 100vh;
+            color: #4A4A4A;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 182, 193, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
+        }
+
+        .bounce-soft {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+
+        .sparkle {
+            animation: pulse-glow 2s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.05); opacity: 1; filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6)); }
+        }
+
+        /* Sparkle floating background effect */
+        .bg-sparkle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            animation: float-up 6s linear infinite;
+        }
+
+        @keyframes float-up {
+            0% { transform: translateY(100vh) scale(0); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+
+        /* Cute Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FFF0F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FFB6C1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF69B4;
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden">
+
+    <div id="sparkle-container"></div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container mx-auto px-4 py-8 max-w-4xl relative z-10">
+
+        <!-- HEADER / HERO SECTION -->
+        <header class="text-center mb-10">
+            <div class="inline-block relative mb-4">
+                <div class="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-tr from-pink-300 via-purple-200 to-yellow-100 p-1.5 shadow-xl bounce-soft mx-auto">
+                    <img src="kucing.jpg" alt="Foto Hera" class="w-full h-full object-cover rounded-full border-4 border-white shadow-inner">
+        
+                </div>
+                <span class="absolute bottom-2 right-2 bg-white text-pink-500 rounded-full p-2 shadow-lg text-lg animate-bounce">
+                    💖
+                </span>
+            </div>
+
+            <h1 class="font-fredoka text-4xl md:text-5xl font-bold text-pink-600 mb-2 tracking-wide sparkle">
+                Halo, Aku Hera cak! 👋✨
+            </h1>
+            
+            <!-- Personality Badges -->
+            <div class="flex flex-wrap justify-center gap-2 mt-3 font-fredoka text-sm md:text-base">
+                <span class="bg-pink-100 text-pink-600 px-3 py-1 rounded-full border border-pink-300 font-semibold shadow-sm hover:scale-105 transition-transform">
+                    👑 Cantik
+                </span>
+                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full border border-purple-300 font-semibold shadow-sm hover:scale-105 transition-transform">
+                    🐣 Imut
+                </span>
+                <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full border border-yellow-300 font-semibold shadow-sm hover:scale-105 transition-transform">
+                    🍬 Manis
+                </span>
+                <span class="bg-rose-100 text-rose-600 px-3 py-1 rounded-full border border-rose-300 font-semibold shadow-sm hover:scale-105 transition-transform">
+                    🎀 Lucu
+                </span>
+            </div>
+
+            <p class="mt-4 text-gray-600 text-base md:text-lg max-w-lg mx-auto font-medium">
+                "info nongss!" ☕💻
+            </p>
+        </header>
+
+        <!-- MAIN GRID LAYOUT -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- HOBI SECTION -->
+            <section class="glass-card rounded-3xl p-6 transition-all hover:shadow-2xl">
+                <div class="flex items-center gap-3 mb-5 border-b border-pink-200 pb-3">
+                    <div class="bg-pink-500 text-white p-3 rounded-2xl shadow-md text-xl">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h2 class="font-fredoka text-2xl font-semibold text-pink-600">Hobi & Kegemaranku</h2>
+                </div>
+
+                <div class="space-y-3 font-medium">
+                    <!-- Cooking -->
+                    <div class="flex items-center gap-3 p-3 bg-white/80 rounded-2xl border border-pink-100 shadow-sm hover:translate-x-1 transition-transform">
+                        <span class="text-2xl">🍳</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Memasak</h3>
+                            <p class="text-xs text-gray-500">Suka eksperimen resep enak & estetik!</p>
+                        </div>
+                    </div>
+                    <!-- Singing -->
+                    <div class="flex items-center gap-3 p-3 bg-white/80 rounded-2xl border border-pink-100 shadow-sm hover:translate-x-1 transition-transform">
+                        <span class="text-2xl">🎤</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Bernyanyi</h3>
+                            <p class="text-xs text-gray-500">Konser tunggal di kamar mandi adalah keahlianku!</p>
+                        </div>
+                    </div>
+                    <!-- Praying -->
+                    <div class="flex items-center gap-3 p-3 bg-white/80 rounded-2xl border border-pink-100 shadow-sm hover:translate-x-1 transition-transform">
+                        <span class="text-2xl">🙏</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Beribadah</h3>
+                            <p class="text-xs text-gray-500">Selalu ingat tuhan.</p>
+                        </div>
+                    </div>
+                    <!-- Coding -->
+                    <div class="flex items-center gap-3 p-3 bg-white/80 rounded-2xl border border-pink-100 shadow-sm hover:translate-x-1 transition-transform">
+                        <span class="text-2xl">💻</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Ngoding</h3>
+                            <p class="text-xs text-gray-500">Ngetik kode warna-warni, ada lawan?</p>
+                        </div>
+                    </div>
+                    <!-- Coffee -->
+                    <div class="flex items-center gap-3 p-3 bg-white/80 rounded-2xl border border-pink-100 shadow-sm hover:translate-x-1 transition-transform">
+                        <span class="text-2xl">☕</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Ngopi</h3>
+                            <p class="text-xs text-gray-500">Bahan bakar utama sebelum ngoding & beraktivitas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KELEBIHAN & KEKURANGAN -->
+            <section class="space-y-6">
+                <!-- Kelebihan -->
+                <div class="glass-card rounded-3xl p-6 transition-all hover:shadow-2xl">
+                    <div class="flex items-center gap-3 mb-3 border-b border-green-200 pb-3">
+                        <div class="bg-emerald-400 text-white p-3 rounded-2xl shadow-md text-xl">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2 class="font-fredoka text-2xl font-semibold text-emerald-600">Kelebihan Utamaku</h2>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-2xl border border-emerald-100 shadow-sm">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-xl">⚡</span>
+                            <h3 class="font-bold text-lg text-emerald-700">Sangat Proaktif!</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Aku inisiatif tinggi, gerak cepat, dan nggak suka nunggu-nunggu. Ada ide langsung eksekusi ncusss
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Kekurangan (Humor Anti IQ 9) -->
+                <div class="glass-card rounded-3xl p-6 transition-all hover:shadow-2xl border-rose-300">
+                    <div class="flex items-center gap-3 mb-3 border-b border-rose-200 pb-3">
+                        <div class="bg-rose-400 text-white p-3 rounded-2xl shadow-md text-xl">
+                            <i class="fa-solid fa-ghost"></i>
+                        </div>
+                        <h2 class="font-fredoka text-2xl font-semibold text-rose-600">Kekurangan Unik</h2>
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-2xl border border-rose-100 shadow-sm relative overflow-hidden">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-xl">🤪</span>
+                            <h3 class="font-bold text-lg text-rose-600">Anti IQ 9 Zone!</h3>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                            Kadang suka *blank* atau loading lama pas diajak mikir yang garing/otak geser! Alergi parah sama hal-hal Unlogical alias "Anti IQ 9". Kalau mendadak lemot, tolong disiram pakai kopi ya! ☕🤣
+                        </p>
+                        <!-- Funny warning badge -->
+                        <div class="mt-3 inline-block bg-rose-100 text-rose-700 text-xs px-3 py-1 rounded-full font-semibold border border-rose-200">
+                            ⚠️ Warning: Jauh-jauh IQ-9
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- INTERACTIVE FUN BUTTON & INSTAGRAM SECTION -->
+        <section class="mt-8 text-center">
+            <div class="glass-card rounded-3xl p-8 shadow-xl max-w-2xl mx-auto">
+                <h3 class="font-fredoka text-2xl font-bold text-pink-600 mb-2">
+                    NONGKIS? ✨
+                </h3>
+                <p class="text-gray-600 text-sm mb-6">
+                    FOLLOW IG GUA!
+                </p>
+
+                <!-- Action Button Container -->
+                <div class="flex justify-center items-center">
+                    <!-- Instagram Button -->
+                    <a href="https://instagram.com/aplinsesh" target="_blank" rel="noopener noreferrer" 
+                       class="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white font-fredoka font-semibold px-10 py-3.5 rounded-2xl shadow-lg hover:shadow-pink-300/50 hover:scale-105 active:scale-95 transition-all text-lg">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                        <span>Follow @aplinsesh</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="mt-12 text-center text-xs text-gray-500 font-medium">
+            <p>Dibuat dengan kekuatan ngoding <span class="font-bold text-pink-500">Hera Cantik</span> ✨</p>
+            <p class="mt-1">© 2026 @aplinsesh • All Cute Rights Reserved</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Generate Floating Sparkles in Background
+        function createSparkles() {
+            const container = document.getElementById('sparkle-container');
+            const sparkleEmojis = ['✨', '💖', '🌸', '☕', '🎀', '⭐'];
+            
+            for (let i = 0; i < 15; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'bg-sparkle text-lg md:text-2xl select-none';
+                sparkle.innerText = sparkleEmojis[Math.floor(Math.random() * sparkleEmojis.length)];
+                
+                // Random position and duration
+                sparkle.style.left = Math.random() * 100 + 'vw';
+                sparkle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                sparkle.style.animationDelay = (Math.random() * 5) + 's';
+                
+                container.appendChild(sparkle);
+            }
+        }
+
+        // Start background sparkle effect on page load
+        window.onload = function() {
+            createSparkles();
+        };
+    </script>
+</body>
+</html>
